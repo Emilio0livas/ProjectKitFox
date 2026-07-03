@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { pool } from "./db.js";
 import morgan from "morgan";
+import helmet from "helmet";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const HOST = process.env.HOST || "127.0.0.1";
 
 app.use(express.json());
 app.use(morgan("combined"));
+app.use(helmet());
 
 function isValidId(value) {
   const id = Number(value);
