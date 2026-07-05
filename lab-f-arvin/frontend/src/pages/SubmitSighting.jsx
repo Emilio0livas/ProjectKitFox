@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { API_BASE_URL } from '../api.js'
+import { createSighting } from '../api.js'
 
 function SubmitSighting() {
   const [observerName, setObserverName] = useState('')
@@ -11,7 +11,6 @@ function SubmitSighting() {
 
   async function handleSubmit(event) {
     event.preventDefault()
-
     setMessage('')
     setError('')
     setSubmitting(true)
@@ -23,19 +22,7 @@ function SubmitSighting() {
     }
 
     try {
-      const response = await fetch(`${API_BASE_URL}/sightings`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newSighting)
-      })
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`)
-      }
-
-      const result = await response.json()
+      const result = await createSighting(newSighting)
 
       setMessage(`Sighting created with ID ${result.id}. Check the Sightings page to see the new record.`)
       setObserverName('')
@@ -52,10 +39,10 @@ function SubmitSighting() {
   return (
     <section>
       <h2>Submit Sighting</h2>
+      <p>This form sends a POST request to the Express/MySQL API.</p>
 
-      <p>
-        This form sends a POST request to the Express/MySQL API.
-      </p>
+      {message && <p>{message}</p>}
+      {error && <p>{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -93,9 +80,6 @@ function SubmitSighting() {
           {submitting ? 'Submitting...' : 'Submit Sighting'}
         </button>
       </form>
-
-      {message && <p>{message}</p>}
-      {error && <p>{error}</p>}
     </section>
   )
 }
