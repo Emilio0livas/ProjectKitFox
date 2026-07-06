@@ -199,7 +199,8 @@ A screen recording of the deployed application demonstrating:
 - One known limitation
 - One planned improvement
 
-Video Link: 
+Video Link: https://csub.zoom.us/rec/share/PuBjBl1Q0zLjFQvjMF4eGsVn1Wtz9LLU0w7VT16qBmVtJbtbidrirhzheDqzO5W9.tvT-7v_Jrm-c5RqC 
+Passcode: 32=HkL.#
 
 ## Final Team Reflection
 
