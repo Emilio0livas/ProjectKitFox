@@ -6,7 +6,7 @@ Denpoints: San Joaquin Kit Fox Tracker
 
 Problem Statement
 
-Denpoints is a web application that was build in order to help record adn review kit fox sightings in Bakersfield and the Kern County Area. Kit fox sightings can be useful for certain audiences like students, researchers, and conservatist groups. These observations can become easy to lose if only shared informally. This project allows users a simple way to submit sightings and view sighting records through a deployed web application.
+Denpoints is a web application that was built in order to help record and review kit fox sightings in Bakersfield and the Kern County Area. Kit fox sightings can be useful for certain audiences like students, researchers, and conservatist groups. These observations can become easy to lose if only shared informally. This project allows users a simple way to submit sightings and view sighting records through a deployed web application.
 
 Target Users
 
@@ -179,12 +179,27 @@ pm2 restart all
 - Make sure MySQL is running before starting the backend.
 - Do not upload or expose sensitive credentials (database passwords, API keys, etc.).
   
-  ## Team Responsibilities
+## Team Contribution Summary
 
-- **Andrew**: Backend development (API routes, server logic, core backend functionality) and contributed to final README
-- **Emilio**: Frontend development (UI, routing, forms, client-side functionality) and finalized MVP implementation and quality/evidence submission
-- **Arvin**: Assisted with backend development and debugging, contributed to final README, and created the demo video
-- **Jose**: Assisted with frontend development and UI support
+- **Andrew**: Backend development (API routes, server logic, core backend functionality), contributed to individual lab work and backend testing, and helped with the final README and team development support.
+
+- **Emilio**: Frontend development (UI, routing, forms, client-side functionality), finalized MVP implementation and quality/evidence submission, and served as the backend MVP owner responsible for API routes, database connection, and the deployed backend used by the team.
+
+- **Arvin**: Assisted with backend development and debugging, worked on frontend/backend integration labs, supported testing workflows, contributed to documentation and reflections, helped identify final product limitations, contributed to the final README, and created the demo video.
+
+- **Jose**: Assisted with frontend development and UI structure, contributed to project planning and general team development support.
+
+## Final Demo Video
+A screen recording of the deployed application demonstrating:
+
+- Opening the live application
+- Navigating main pages
+- Submitting and viewing sightings
+- Showing the GitHub repository
+- One known limitation
+- One planned improvement
+
+Video Link: 
 
 ## Final Team Reflection
 
