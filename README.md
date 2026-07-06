@@ -100,3 +100,100 @@ The final frontend submits observer name, sighting date, and location name. The 
 | Form prevents future sighting dates. | No | Submit form testing | Future dates are currently not validated and this is listed as a planned improvement. |
 | User can view sightings on a map. | No | Dashboard placeholder | Map visualization is planned for a future milestone but is not yet implemented. |
 ## How to Run or Redeploy
+
+### 1. Clone the repository
+ 
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+```
+ 
+### 2. Install dependencies
+ 
+**Backend**
+ 
+```bash
+cd backend
+npm install
+```
+ 
+**Frontend**
+ 
+```bash
+cd frontend
+npm install
+```
+ 
+### 3. Run the project locally
+ 
+**Start backend server**
+ 
+```bash
+cd backend
+npm run dev
+```
+ 
+**Start frontend server**
+ 
+```bash
+cd frontend
+npm start
+```
+ 
+### 4. Build the frontend (for deployment)
+ 
+```bash
+cd frontend
+npm run build
+```
+ 
+This creates a production-ready build folder.
+ 
+### 5. Deploy / restart backend (production server)
+ 
+If using PM2:
+ 
+```bash
+pm2 list
+pm2 restart all
+```
+ 
+Or restart a specific process:
+ 
+```bash
+pm2 restart <process-name>
+```
+ 
+### 6. Pull latest updates on server (redeploy process)
+ 
+```bash
+git pull origin main
+npm install
+npm run build
+pm2 restart all
+```
+ 
+### Notes
+ 
+- Ensure environment variables (`.env`) are configured correctly on the server.
+- Make sure MySQL is running before starting the backend.
+- Do not upload or expose sensitive credentials (database passwords, API keys, etc.).
+  
+  ## Team Responsibilities
+
+- **Andrew**: Backend development (API routes, server logic, core backend functionality) and contributed to final README
+- **Emilio**: Frontend development (UI, routing, forms, client-side functionality) and finalized MVP implementation and quality/evidence submission
+- **Arvin**: Assisted with backend development and debugging, contributed to final README, and created the demo video
+- **Jose**: Assisted with frontend development and UI support
+
+## Final Team Reflection
+
+The final application successfully meets its core goal of allowing users to view and submit San Joaquin kit fox sightings through a full-stack web application. The frontend is fully deployed and provides working navigation between pages, including a dashboard, sightings list, submission form, and about page. The backend is stable and correctly handles API requests, including creating and retrieving sightings from a MySQL database. The system also includes health and database test routes, which confirm that the server and database connection are functioning properly.
+
+However, some features are still incomplete. Although the backend supports update and delete operations, these actions are not yet implemented in the frontend interface. In addition, optional data fields such as health status and notes are stored in the database but are not collected through the frontend form. The application also lacks a map visualization and has limited input validation, allowing issues such as future sighting dates.
+
+The hardest technical challenge was ensuring smooth communication between the frontend, backend, and database across a deployed environment. Debugging API requests and deployment issues on the server required coordination between team members and careful testing. From a teamwork perspective, aligning frontend and backend integration while working in parallel was also a key challenge.
+
+If more time were available, the next sprint would focus on completing full CRUD functionality in the frontend, improving form validation, and implementing the map visualization feature. Additional work would also include improving dashboard statistics and refining error handling for a more user-friendly experience.
+
+Overall, the team learned how important clear API design, consistent communication, and deployment awareness are when building and handing off a full-stack software project.
