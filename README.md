@@ -84,4 +84,25 @@ Important Fields
 
 The final frontend submits observer name, sighting date, and location name. The final backend stores the health status and notes apart of the sightings table, but those fields were removed from teh final frontend form.
 
-Trace Table
+## Trace Table
+
+| Planned Feature or User Story                            | Status | Evidence                                  | Notes                                                                                     |
+| -------------------------------------------------------- | ------ | ----------------------------------------- | ----------------------------------------------------------------------------------------- |
+| User can open the deployed application in a browser.     | Yes    | https://bender.cs.csubak.edu/team-6-s26/lab-f-emilio| The React app is deployed at the team bender URL.                                         |
+| User can navigate between main pages.                    | Yes    | Frontend URL / demo video                 | The navigation includes dashboard, submit sighting, sightings, and about pages.           |
+| User can view sighting records.                          | Yes    | <img width="1517" height="935" alt="sightings" src="https://github.com/user-attachments/assets/f4f8cd3a-04d3-4851-9235-3d818b75b349" />
+        | The sightings page loads live records from Emilio’s backend API.                          |
+| User can submit a new kit fox sighting.                  | Yes    | Submit page / `POST /sightings`           | The form sends observer name, sighting date, and location name to the API.                |
+| Backend can connect to the database.                     | Yes    | `<img width="391" height="192" alt="db-test" src="https://github.com/user-attachments/assets/313b336c-40ca-488f-98d7-4be320ac901d" />
+                            | The backend has a database test route that confirms MySQL connection.                     |
+| Backend can create and read records.                     | Yes    | `<img width="1528" height="758" alt="Backend Read Records" src="https://github.com/user-attachments/assets/2689f011-5632-4485-899e-3554795d7d0d" />
+<img width="783" height="202" alt="backend new sighting" src="https://github.com/user-attachments/assets/4befaad1-22db-47e2-9538-224cdb2ee2f4" />
+
+       | These are the main backend routes used by the frontend.                                   |
+| User can update an existing sighting from the frontend.  | No     | Backend route exists, frontend UI missing | `PUT /sightings/:id` exists, but there is no edit interface in the frontend yet.          |
+| User can delete an existing sighting from the frontend.  | No     | Backend route exists, frontend UI missing | `DELETE /sightings/:id` exists, but there is no delete button or confirmation flow yet.   |
+| User can enter health status or notes from the frontend. | No     | Submit form                               | The team chose to keep the final frontend form limited to required fields.                |
+| Form prevents future sighting dates.                     | No     | Submit form testing                       | The team noticed future dates are still accepted and listed this as a future improvement. |
+| User can view sightings on a map.                        | No     | Dashboard placeholder                     | The map view is planned for a future sprint but was not completed.                        |
+
+## How to Run or Redeploy
